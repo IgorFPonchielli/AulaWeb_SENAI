@@ -10,7 +10,7 @@ $(function () {
     $(":disabled").css("opacity", "0.5")
     $(":checkbox:checked").parent().css("backgroundColor", "red")
     $(":radio:checked").parent().css("backgroundColor", "red")
-    $("textarea").val($("select option:selected").text())
+    $(":text").val($("select option:selected").text())
     
 
 
