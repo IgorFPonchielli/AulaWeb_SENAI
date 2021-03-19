@@ -1,0 +1,29 @@
+#jogoVelha {
+    width: 603px;
+    height: 600px;
+    border: solid 3px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#cadJogadores {
+    margin: auto 0;
+    padding: 10px;
+}
+
+.linha {
+    height: 200px;
+    border-bottom: solid 1px;
+}
+
+.coluna {
+    width: 200px;
+    height: 100%;
+    border-right: solid 1px;
+    float: left;
+}
+
+.resultado {
+    display: flex;
+    align-items: center;
+}
