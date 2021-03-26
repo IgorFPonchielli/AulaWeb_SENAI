@@ -15,28 +15,33 @@
 <body>
     <div class="container">
         <div class="title-search-bar">
-            <h1 class="d-flex justify-content-center">GIF API</h1>
+            <h1 class="d-flex justify-content-center">API de GIF</h1>
             <div id="buttons"></div>
             <form class="search-bar">
                 <div class="row justify-content-md-center">
                     <div class="form-group col-3">
-                        <input type="text" class="form-control" name="query" id="user-search" />
-                    </div>
-                    <div class="form-group col-3">
-                        <input id="submit" type="button" value="Buscar" class="btn  btn btn-primary" />
+                        <input type="text" class="form-control inputSearch" name="search" />
                     </div>
                 </div>
                 <div class="row justify-content-md-center">
-                    <div class="form-group col-3">
-                        <input type="button" class="trending btn btn-dark" value="Buscar GIFs em Alta" />
+                    <div class="form-group col-2">
+                        <input type="button" value="Buscar" class="form-control btn searchGif btn-primary" />
+                    </div>
+                    <div class="form-group col-2">
+                        <input type="button" value="Estou com Sorte!"
+                            class="randomGif form-control btn btn btn-success" />
+                    </div>
+                    <div class="form-group col-2">
+                        <input type="button" class="trending form-control btn btn-dark" value="Buscar GIFs em Alta" />
                     </div>
                 </div>
             </form>
 
         </div>
         <hr>
-        <div id="results"></div>
+        <a href="https://media3.giphy.com/media/xThuWucIMjWwLCDgmA/200.gif?cid=1cc5222111887e1dd01878ecd4025fd8b0cb1e7532f04e9e&rid=200.gif&ct=g" download="output.gif">Download</a>
+        <div id="results">
+        </div>
     </div>
 </body>
-
 </html>
