@@ -22,6 +22,11 @@ $(function () {
             fmt: "json"
         };
         if ($(this).hasClass("searchGif")) {
+
+            if($(".inputSearch").val() == "") {
+                alert("Informe um termo no campo acima.")
+            }
+
             busca = $(".inputSearch").val();
             delete params.tag;
             params.q = busca;
@@ -40,10 +45,10 @@ $(function () {
             url: url + $.param(params),
             method: "GET",
             beforeSend: function () {
-                $('#results').after('<p class="loading text-center">Aguarde! Garregando... </p>')
+                $('#results').after('<p class="message-alert text-white text-center">Aguarde! Garregando... </p>')
             },
             error: function () {
-                $('#results').after('<p class="loading text-center">Falhou!</p>')                       
+                $('#results').after('<p class="message-alert text-white text-center">Falhou!</p>')                       
             },
             success: function (dados) {
                 console.log(url + $.param(params))
@@ -55,7 +60,7 @@ $(function () {
                }            
             },
             complete: function () {
-                $(".loading").remove()
+                $(".message-alert").remove()
             }
         });
     });
