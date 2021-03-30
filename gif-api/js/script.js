@@ -14,10 +14,12 @@ $(function () {
         // Beginning API call
         var url = "https://api.giphy.com/v1/gifs/search?";
         var busca;
+        var limite = $("#selectLimit").val();
         var params = {
             q: busca,
             tag: busca,
-            limit: 9,
+            limit: ((limite == null) ? 3 : limite),
+            lang: "pt",
             api_key: "VG19zLwpzrrikiRijv6OyA4PPecZ8CZn",
             fmt: "json"
         };
@@ -113,7 +115,7 @@ $(function () {
             }
 
             $('#results .row:last-child').append(`
-            <div class="col-md-4">
+            <div class="col-md-4 align-self-center">
                 <div class="card mb-4 box-shadow">
                     <img src="${dados.data[i].images.fixed_height.url}"
                         class="card-img-top" alt="${dados.data[i].title}">
