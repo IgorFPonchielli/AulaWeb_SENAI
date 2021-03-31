@@ -1,17 +1,7 @@
 $(function () {
 
-        //window.open(canvas.toDataURL('image/png'));
-        /*var gh = 'https://media4.giphy.com/media/KmlTchPoFQT84/200.gif?cid=1cc52221337ef3fdada5299d62b9ffb4963d92133a95b8af&rid=200.gif&ct=g';
-
-        var a  = document.createElement('a');
-        a.href = gh;
-        a.download = 'image.png';
-
-        a.click()*/
-
     $(".btn").click(function (e) {
         $("#results").html("");
-        // Beginning API call
         var url = "https://api.giphy.com/v1/gifs/search?";
         var busca;
         var limite = $("#selectLimit").val();
