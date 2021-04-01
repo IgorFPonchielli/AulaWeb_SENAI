@@ -4,7 +4,7 @@ $(function () {
         $("#results").html("");
         var url = "https://api.giphy.com/v1/gifs/search?";
         var busca;
-        var limite = $("#selectLimit").val();
+        var limite = $("#selectLimit").val();        
         var params = {
             q: busca,
             tag: busca,
@@ -36,7 +36,8 @@ $(function () {
         $.ajax({
             url: url + $.param(params),
             method: "GET",
-            beforeSend: function () {
+            beforeSend: function () {                
+                $(".message-alert").remove();
                 $('#results').after('<p class="message-alert text-white text-center">Aguarde! Garregando... </p>')
             },
             error: function () {
