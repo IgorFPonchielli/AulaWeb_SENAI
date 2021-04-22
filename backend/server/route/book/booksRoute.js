@@ -1,29 +1,29 @@
 const { Router } = require('express');
 const express = require('express');
-const publishersService = require('../../service/publisher/publishersService');
+const booksService = require('../../service/book/booksService');
 const router = express();
 
 //retorna todos os livros
-router.get('/publishers', async function(req, res) {
-    const publishers = await publishersService.getPublishers();
-    res.json(publishers);
+router.get('/books', async function(req, res) {
+    const books = await booksService.getBooks();
+    res.json(books);
 });
 
 //retorna livro por codigo passado na URL
-router.get('/publisher/:codigo', async function(req, res) {
-   const publisher = await publishersService.getPublisher(req.params.codigo);
-   res.json(publisher);
+router.get('/book/:codigo', async function(req, res) {
+   const book = await booksService.getBook(req.params.codigo);
+   res.json(book);
 });
 
-router.delete('/publisher/:codigo', async function(req, res) {
-    await publishersService.deletePublisher(req.params.codigo);
+router.delete('/book/:codigo', async function(req, res) {
+    await booksService.deleteBook(req.params.codigo);
     return res.json([{message: 'registro excluido com sucesso'}])
 });
 
-router.put('/publisher', async function(req, res) {
-    const publisher = req.body;
-    const newPublisher = await publishersService.savePublisher(publisher);
-    res.json(newPublisher)
+router.put('/book', async function(req, res) {
+    const book = req.body;
+    const newBook = await booksService.saveBook(book);
+    res.json(newBook)
 });
 
 module.exports = router;
