@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -55,4 +56,63 @@
     </div>
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <title>GIPHY API</title>
+</head>
+
+<body class="bg-dark">
+    <div class="container">
+        <div class="title-search-bar">
+            <h1 class="text-white d-flex justify-content-center">Buscador de GIF</h1>
+            <div id="buttons"></div>
+            <form class="search-bar">
+                <div class="row justify-content-md-center">
+                    <div class="form-group col-8 col-sm-9 col-md-7 col-lg-6 col-xl-4">
+                        <input type="text" class="form-control inputSearch" name="search"
+                            placeholder="Pesquise aqui" />
+                    </div>
+                    <div class="form-group pl-0 col-4 col-sm-3 col-md-2 col-lg-2 col-xl-2">
+                        <select class="form-control" id="selectLimit">
+                            <option selected disabled>Limite</option>
+                            <option>6</option>
+                            <option>9</option>
+                            <option>12</option>
+                            <option>15</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row justify-content-md-center">
+                    <div class="form-group col-12 col-sm-6 col-md-2 col-lg-2 col-xl-2">
+                        <input type="button" value="Buscar" class="form-control btn searchGif btn-primary" />
+                    </div>
+                    <div class="form-group px-md-0 col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+                        <input type="button" class="trending form-control btn btn-secondary"
+                            value="Buscar GIFs em Alta" />
+                    </div>
+                    <div class="form-group col-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
+                        <input type="button" value="Estou com Sorte!"
+                            class="randomGif form-control btn btn btn-success" />
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <hr>
+        <div id="results">
+        </div>
+    </div>
+</body>
+
+>>>>>>> 3f8eddc06845eb1d94722334319affd0225213b1
 </html>
