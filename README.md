@@ -4,3 +4,6 @@ Backend:
 ```
 npm install express body-parser pg-promise jest axios
 ```
+```
+npm install pg pg-hstore sequelize sequelize-cli
+```
