@@ -2,12 +2,13 @@ const express = require('express');
 
 /*const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");*/
-
+const cors = require('cors');
 const app = express();
 const booksRoute = require('./route/book/booksRoute');
 const publishersRoute = require('./route/publisher/publishersRoute');
 
-app.use(express.json())
+app.use(express.json());
+app.use(cors());
 
 /*const options = {
     definition: {

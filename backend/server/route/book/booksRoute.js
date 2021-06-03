@@ -7,6 +7,7 @@ const router = express();
 router.get('/books', async function(req, res) {
     const books = await booksService.getBooks();
     res.json(books);
+    
 });
 
 //retorna livro por codigo passado na URL
