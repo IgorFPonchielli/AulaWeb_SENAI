@@ -6,6 +6,7 @@ const cors = require('cors');
 const app = express();
 const booksRoute = require('./route/book/booksRoute');
 const publishersRoute = require('./route/publisher/publishersRoute');
+const usersRoute = require('./route/user/usersRoute');
 
 app.use(express.json());
 app.use(cors());
@@ -31,4 +32,5 @@ app.use(cors());
 
 app.use(booksRoute);
 app.use(publishersRoute);
+app.use(usersRoute);
 app.listen(3333);

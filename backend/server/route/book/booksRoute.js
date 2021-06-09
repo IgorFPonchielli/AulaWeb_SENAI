@@ -21,7 +21,7 @@ router.delete('/book/:codigo', async function(req, res) {
     return res.json([{message: 'registro excluido com sucesso'}])
 });
 
-router.put('/book', async function(req, res) {
+router.post('/book', async function(req, res) {
     const book = req.body;
     const newBook = await booksService.saveBook(book);
     res.json(newBook)
