@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(function () {
 
     $(".btn").click(function (e) {
@@ -127,7 +126,7 @@ $(function () {
         }
 }
     
-=======
+
 $(function () {
 
     $(".btn").click(function (e) {
@@ -256,5 +255,4 @@ $(function () {
         }
 }
     
->>>>>>> 3f8eddc06845eb1d94722334319affd0225213b1
 })
